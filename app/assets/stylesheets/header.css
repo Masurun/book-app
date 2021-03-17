@@ -1,0 +1,17 @@
+header{
+  display: flex;
+  justify-content: space-between;
+  background-color: azure;
+}
+.header-logo{
+  font-size: 50px;
+}
+
+.header-menus a{
+  text-decoration: none;
+  color: black;
+}
+
+.upper-nickname{
+  margin-top: 10px;
+}
