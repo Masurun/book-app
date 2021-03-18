@@ -1,0 +1,13 @@
+<%=render 'shared/header'%>
+<h1>本一覧</h1>
+<table align="center">
+ <tr>
+<%@books.each do |book|%>
+  <%=book.title%>
+</tr>
+<%= link_to '編集', edit_book_path(book.id) %> 
+<%= link_to "削除", book, method: :delete, data: { confirm: "本当に削除しますか?" } %> 
+<%end%>
+</table>
+<%=link_to "本の登録",new_book_path%>
+

@@ -1,0 +1,6 @@
+<%=form_with model:@book,local: true do |f|%>
+  <%=f.label "タイトル"%>
+  <%=f.text_field :title%>
+  <%=f.submit "登録する"%>
+  <%=link_to "戻る",root_path%>
+<%end%>
