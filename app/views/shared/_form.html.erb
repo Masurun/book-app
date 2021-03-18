@@ -13,7 +13,7 @@
       </tr>
       <tr>
         <th>カテゴリー</th>
-        <td><%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+        <td><%= f.collection_select(:category_id, Category.all, :id, :name, {}, {}) %>
         </td>
       </tr>
       <tr>
@@ -33,6 +33,10 @@
           date_separator:'%s'),'年','月')+'日' %>
         </td>
       </tr>
+      <td>
+      <%= f.submit "登録する" %>
+      <%=link_to 'もどる', root_path%>
+      </td>
     </tbody>
   </table>
  <%end%>
