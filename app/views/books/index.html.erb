@@ -1,0 +1,36 @@
+<%=render 'shared/header'%>
+<h1>本一覧</h1>
+<p><%=link_to "本の登録",new_book_path%></p>
+<table>
+<%@books.each do |book|%>
+
+<tbody>
+        <tr>
+            <th>タイトル</th>
+            <td><%=book.title%></td>
+        </tr>
+         <tr>
+            <th>著者</th>
+            <td><%=book.author%></td>
+        </tr>
+         <tr>
+            <th>出版社</th>
+            <td><%=book.publication%></td>
+        </tr>
+        <tr>
+            <th>出版日</th>
+            <td><%=book.publication_date%></td>
+        </tr>
+        <tr>
+            <th>カテゴリー</th>
+            <td><%=book.category.name%></td>
+        </tr>
+        <tr>
+      <th><%= link_to '編集', edit_book_path(book.id) %></th>
+      <th><%= link_to "削除", book, method: :delete, data: { confirm: "本当に削除しますか?" } %></th> 
+      </tr>
+    </tbody>
+<%end%>
+</table>
+
+
